@@ -21,6 +21,7 @@ test('Launch Application Demoqa', async({page})=>{
    await textbox.datainput('Srividya','srikann@gtail.com','Hornsby','Faddress')
    await textbox.dataclear()
    await utils.launchurl("https://demoqa.com/checkbox")
+   
    await checkbox.selectCheckbox()
        await page.pause()
        await utils.launchurl('https://demoqa.com/login')
