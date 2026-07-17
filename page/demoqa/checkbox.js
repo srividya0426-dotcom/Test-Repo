@@ -4,7 +4,7 @@ export class Checkbox {
         this.page = page;
         this.chkbox = page.locator('[aria-label="Select Home"]');
         this.home = page.getByTitle("Home");
-        this.expand=page.locator('.rc-tree-switcher')
+        this.treeSwitcher=page.locator('.rc-tree-switcher');
         this.desktop = page.getByTitle("Desktop");
         this.desktop1 = page.locator('[aria-label="Select Desktop"]');
         this.document1 = page.getByText("Document");
@@ -15,9 +15,10 @@ export class Checkbox {
 
     async selectCheckbox() {
         await this.chkbox.click();
-        await this.expand.click()
+        await this.treeSwitcher.click()
         await this.desktop.click()
 
 
     }
 }
+
