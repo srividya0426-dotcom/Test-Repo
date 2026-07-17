@@ -4,10 +4,18 @@ import { test, expect } from '@playwright/test';
 export class Radio{
     constructor(page){
     this.page=page        
-        this.radio1=page.locator('[id="yesRadio"]')
-        this.radio2=page.locator('[id="impressiveRadio"]')
-        this.radio3=page.locator('[id="noRadio"]')
+        this.yes =page.locator('[id="yesRadio"]')
+        this.impressive =page.locator('[id="impressiveRadio"]')
+        this.no =page.locator('[id="noRadio"]')
         
     }
+
+    async Radioaction(){
+        await this.yes.click()
+        await this.impressive.click()
+        await this.no.click()
+    }
+    
+
 }
 
